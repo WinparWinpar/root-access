@@ -1,4 +1,5 @@
-all: root
+all:
+	root
 
 root:
 	chmod +x root
